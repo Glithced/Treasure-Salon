@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Treasure Salon</title>
+    <!-- Favicon (tab icon) -->
+    <link rel="icon"
+        href="https://cdn.vectorstock.com/i/preview-1x/95/44/black-classic-barber-shop-pole-icon-isolated-vector-43479544.jpg"
+        type="image/jpg">
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400&display=swap"
         rel="stylesheet">
@@ -23,7 +27,15 @@
             background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=122129340812793501') center/cover no-repeat;
             color: #fff;
             text-align: center;
-            padding: 180px 20px 120px;
+            padding: 150px 20px 100px;
+            position: relative;
+        }
+
+        .header-logo {
+            width: 250px;
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 20px;
         }
 
         h1 {
@@ -59,7 +71,7 @@
             transform: translateY(0);
         }
 
-        /* Navigation Base */
+        /* Navigation with Logo */
         nav {
             background: #1a1a1a;
             position: sticky;
@@ -69,14 +81,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 30px;
+            padding: 10px 30px;
         }
 
-        .nav-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8em;
-            color: #d4af37;
-            text-decoration: none;
+        .nav-logo-img {
+            height: 60px;
+            width: auto;
         }
 
         .nav-links {
@@ -97,7 +107,7 @@
             color: #d4af37;
         }
 
-        /* Hamburger Menu (Mobile) */
+        /* Hamburger Menu */
         .hamburger {
             display: none;
             font-size: 1.8em;
@@ -162,7 +172,7 @@
             margin: auto;
         }
 
-        /* About Us - Enhanced */
+        /* About Us */
         #about {
             background: #111;
             padding: 80px 20px;
@@ -258,10 +268,14 @@
             font-size: 0.9em;
         }
 
-        /* Mobile Styles */
+        /* Mobile */
         @media (max-width: 768px) {
             header {
-                padding: 140px 20px 100px;
+                padding: 120px 20px 80px;
+            }
+
+            .header-logo {
+                width: 200px;
             }
 
             h1 {
@@ -280,6 +294,14 @@
                 display: block;
             }
 
+            nav {
+                padding: 10px 20px;
+            }
+
+            .nav-logo-img {
+                height: 50px;
+            }
+
             #about .about-card {
                 padding: 40px 30px;
             }
@@ -290,10 +312,6 @@
 
             #about p {
                 font-size: 1.2em;
-            }
-
-            .services {
-                gap: 30px;
             }
         }
 
@@ -309,26 +327,21 @@
             #about h2 {
                 font-size: 2.2em;
             }
-
-            nav {
-                padding: 15px 20px;
-            }
-
-            .nav-logo {
-                font-size: 1.6em;
-            }
         }
     </style>
 </head>
 
 <body>
     <header>
+        <img src="https://static.vecteezy.com/system/resources/previews/011/643/685/non_2x/barbershop-unique-elegant-gold-logo-template-vector.jpg"
+            alt="Treasure Salon Logo" class="header-logo">
         <h1>Treasure <span>Salon</span></h1>
-        <p>Exquisite Men's Grooming • Bespoke Perfumes • Casual Sports Footwear</p>
+        <p>Exquisite Men's Grooming • Perfumes • Casual Sports Footwear</p>
     </header>
 
     <nav>
-        <a href="#home" class="nav-logo">Treasure Salon</a>
+        <img src="https://static.vecteezy.com/system/resources/previews/011/643/685/non_2x/barbershop-unique-elegant-gold-logo-template-vector.jpg"
+            alt="Treasure Salon Logo" class="nav-logo-img">
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#services">Services & Products</a>
@@ -338,7 +351,7 @@
         <div class="hamburger" onclick="toggleMenu()">☰</div>
     </nav>
 
-    <!-- Mobile Menu Overlay -->
+    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <div class="close-btn" onclick="toggleMenu()">×</div>
         <a href="#home" onclick="toggleMenu()">Home</a>
@@ -352,7 +365,7 @@
             <h2>About Us</h2>
             <p>At Treasure Salon, we redefine luxury grooming for the modern gentleman. Our master barber delivers
                 precision haircuts in an atmosphere of refined elegance, complemented by an exclusive curation of
-                world-class perfumes and casual sports shoes.</p>
+                good quality perfumes and casual sports shoes.</p>
         </div>
     </section>
 
@@ -368,9 +381,9 @@
             <div class="service-card">
                 <img src="https://thumbs.dreamstime.com/b/beautifully-crafted-glass-perfume-bottle-filled-rich-dark-amber-liquid-stands-elegantly-reflective-black-surface-408876843.jpg"
                     alt="Luxury gold and white Oud perfume bottles">
-                <h3>Bespoke Perfumes</h3>
+                <h3>Good Quality Perfumes</h3>
                 <p>Curated collection of iconic fragrances, including premium gold and white Oud bottles. Average price:
-                    R800 (from R150 entry-level).</p>
+                    R250(from R150 entry-level).</p>
             </div>
             <div class="service-card">
                 <img src="https://m.media-amazon.com/images/I/71+I9Q6ThVL._AC_UY900_.jpg"
@@ -394,13 +407,11 @@
     </footer>
 
     <script>
-        // Hero animation
         window.addEventListener('load', () => {
             document.querySelector('header h1').classList.add('visible');
             document.querySelector('header p').classList.add('visible');
         });
 
-        // Scroll animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -413,7 +424,6 @@
             observer.observe(el);
         });
 
-        // Mobile menu toggle
         function toggleMenu() {
             document.getElementById('mobileMenu').classList.toggle('active');
         }
