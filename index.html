@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Salon</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0f0f0f;
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=122129340812793501') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 180px 20px 120px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5em;
+            margin: 0 0 20px 0;
+            letter-spacing: 3px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1.2s ease-out;
+        }
+
+        h1.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1 span {
+            color: #d4af37;
+        }
+
+        header p {
+            font-size: 1.4em;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out 0.5s;
+        }
+
+        header p.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        nav {
+            background: #1a1a1a;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        nav a {
+            color: #e0e0e0;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 1.1em;
+            transition: color 0.3s;
+            display: inline-block;
+            padding: 8px 12px;
+        }
+
+        nav a:hover,
+        nav a:active {
+            color: #d4af37;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: #d4af37;
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        /* Enhanced About Us Section */
+        #about {
+            background: #111;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        #about .about-card {
+            background: #1a1a1a;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px 40px;
+            border: 2px solid #d4af37;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease-out;
+        }
+
+        #about .about-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #about h2 {
+            padding: 0 0 30px 0;
+            font-size: 3em;
+        }
+
+        #about p {
+            font-size: 1.3em;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .service-card {
+            background: #1a1a1a;
+            padding: 30px;
+            width: 100%;
+            max-width: 380px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 1px solid #333;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .service-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .service-card:hover,
+        .service-card:active {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: #d4af37;
+            font-size: 1.8em;
+            margin: 20px 0 15px;
+        }
+
+        #contact p {
+            text-align: center;
+            font-size: 1.1em;
+            max-width: 600px;
+            margin: 15px auto;
+        }
+
+        footer {
+            background: #000;
+            color: #999;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9em;
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            header {
+                padding: 140px 20px 100px;
+            }
+
+            h1 {
+                font-size: 3em;
+                letter-spacing: 2px;
+            }
+
+            header p {
+                font-size: 1.2em;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+                font-size: 1.2em;
+            }
+
+            h2 {
+                font-size: 2.2em;
+            }
+
+            #about .about-card {
+                padding: 40px 30px;
+            }
+
+            #about h2 {
+                font-size: 2.5em;
+            }
+
+            #about p {
+                font-size: 1.2em;
+            }
+
+            .services {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            header p {
+                font-size: 1.1em;
+            }
+
+            #about h2 {
+                font-size: 2.2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Treasure <span>Salon</span></h1>
+        <p>Exquisite Men's Grooming • Bespoke Perfumes • Casual Sports Footwear</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services & Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <div class="about-card">
+            <h2>About Us</h2>
+            <p>At Treasure Salon, we redefine luxury grooming for the modern gentleman. Our master barber delivers
+                precision haircuts in an atmosphere of refined elegance, complemented by an exclusive curation of
+                world-class perfumes and casual sports shoes.</p>
+        </div>
+    </section>
+
+    <section id="services" style="background: #111;">
+        <h2>Our Exclusive Offerings</h2>
+        <div class="services">
+            <div class="service-card">
+                <img src="https://media.istockphoto.com/id/937443868/photo/barber-giving-a-haircut-in-his-shop.jpg?s=612x612&w=0&k=20&c=wdcKDn9BnLe979S4BGQlYrKX8d4gBkRc4siYDQgPA-s="
+                    alt="Black man getting professional haircut">
+                <h3>Master Haircuts & Grooming</h3>
+                <p>Signature cuts, hot towel shaves, and beard sculpting by expert artisans. Starting at R80.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://thumbs.dreamstime.com/b/beautifully-crafted-glass-perfume-bottle-filled-rich-dark-amber-liquid-stands-elegantly-reflective-black-surface-408876843.jpg"
+                    alt="Luxury gold and white Oud perfume bottles">
+                <h3>Bespoke Perfumes</h3>
+                <p>Curated collection of iconic fragrances, including premium gold and white Oud bottles. Average price:
+                    R250 (from R150 entry-level).</p>
+            </div>
+            <div class="service-card">
+                <img src="https://m.media-amazon.com/images/I/71+I9Q6ThVL._AC_UY900_.jpg"
+                    alt="Simple casual men's sports sneakers">
+                <h3>Casual Sports Footwear</h3>
+                <p>Comfortable, simple athletic sneakers for everyday style. From R300.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Visit Us</h2>
+        <p>Address: [Your Full Address], Cape Town</p>
+        <p>Phone: [Your Phone Number]</p>
+        <p>Email: [Your Email]</p>
+        <p>Hours: Mon-Sat 10AM-8PM | By Appointment Preferred</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Treasure Salon. Crafted with distinction.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.querySelector('header h1').classList.add('visible');
+            document.querySelector('header p').classList.add('visible');
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.service-card, .about-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>
