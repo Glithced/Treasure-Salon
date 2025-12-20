@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treasure Salon</title>
+    <title>Treasure Femme Salon</title>
     <link rel="icon"
         href="https://cdn.vectorstock.com/i/preview-1x/95/44/black-classic-barber-shop-pole-icon-isolated-vector-43479544.jpg"
         type="image/jpg">
@@ -16,34 +16,37 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: #0f0f0f;
-            color: #e0e0e0;
+            background: linear-gradient(to bottom, #ffe4f0, #ffb6c1);
+            color: #444;
             line-height: 1.6;
             overflow-x: hidden;
         }
 
         header {
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=122129340812793501') center/cover no-repeat;
-            color: #fff;
+            background: linear-gradient(rgba(255, 182, 193, 0.75), rgba(255, 182, 193, 0.75)), url('https://thumbs.dreamstime.com/b/soft-pink-luxury-beauty-salon-background-abstract-blurred-tones-356507117.jpg') center/cover no-repeat;
+            color: #333;
             text-align: center;
-            padding: 150px 20px 100px;
+            padding: 160px 20px 110px;
         }
 
         .header-logo {
-            width: 250px;
-            max-width: 80%;
+            width: 300px;
+            max-width: 85%;
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 4.5em;
+            font-size: 5em;
             margin: 0 0 20px 0;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             opacity: 0;
             transform: translateY(50px);
             transition: all 1.2s ease-out;
+            color: #c71585;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.3);
         }
 
         h1.visible {
@@ -56,58 +59,52 @@
         }
 
         header p {
-            font-size: 1.4em;
-            max-width: 800px;
+            font-size: 1.5em;
+            max-width: 900px;
             margin: 0 auto;
             opacity: 0;
             transform: translateY(30px);
             transition: all 1s ease-out 0.5s;
-        }
-
-        header p.visible {
-            opacity: 1;
-            transform: translateY(0);
+            color: #555;
         }
 
         nav {
-            background: #1a1a1a;
+            background: linear-gradient(to right, #ff69b4, #ff1493);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 30px;
+            padding: 12px 30px;
         }
 
         .nav-logo-img {
-            height: 60px;
+            height: 65px;
             width: auto;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
         }
 
         .nav-links a {
-            color: #e0e0e0;
+            color: #fff;
             text-decoration: none;
-            font-weight: 400;
-            font-size: 1.1em;
-            transition: color 0.3s;
-            padding: 8px 12px;
+            font-weight: 500;
+            font-size: 1.2em;
+            transition: all 0.3s;
+            padding: 10px 15px;
+            border-radius: 20px;
         }
 
         .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
             color: #d4af37;
         }
 
         .hamburger {
             display: none;
-            font-size: 1.8em;
-            color: #d4af37;
+            font-size: 2em;
+            color: #fff;
             cursor: pointer;
             padding: 10px;
         }
@@ -118,13 +115,13 @@
             left: 0;
             width: 100%;
             height: 100vh;
-            background: rgba(15, 15, 15, 0.98);
+            background: linear-gradient(to bottom, #ff69b4, #ff1493);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             transform: translateY(-100%);
-            transition: transform 0.4s ease-in-out;
+            transition: transform 0.5s ease-in-out;
             z-index: 999;
         }
 
@@ -133,33 +130,35 @@
         }
 
         .mobile-menu a {
-            color: #e0e0e0;
-            font-size: 2em;
-            margin: 20px 0;
+            color: #fff;
+            font-size: 2.5em;
+            margin: 25px 0;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: all 0.3s;
         }
 
         .mobile-menu a:hover {
             color: #d4af37;
+            transform: scale(1.1);
         }
 
         .close-btn {
             position: absolute;
-            top: 30px;
-            right: 30px;
-            font-size: 2.5em;
-            color: #d4af37;
+            top: 40px;
+            right: 40px;
+            font-size: 3em;
+            color: #fff;
             cursor: pointer;
         }
 
         h2 {
             font-family: 'Playfair Display', serif;
             text-align: center;
-            padding: 60px 20px 40px;
-            color: #d4af37;
-            font-size: 2.5em;
+            padding: 70px 20px 50px;
+            color: #c71585;
+            font-size: 3em;
             margin: 0;
+            text-shadow: 1px 1px 3px rgba(255, 105, 180, 0.2);
         }
 
         section {
@@ -169,19 +168,19 @@
         }
 
         #about {
-            background: #111;
-            padding: 80px 20px;
+            background: #fff0f8;
+            padding: 90px 20px;
             text-align: center;
         }
 
         #about .about-card {
-            background: #1a1a1a;
-            max-width: 900px;
+            background: #fff;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 50px 40px;
-            border: 2px solid #d4af37;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+            padding: 60px 50px;
+            border: 4px solid #ff69b4;
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(255, 105, 180, 0.3);
             opacity: 0;
             transform: translateY(50px);
             transition: all 1s ease-out;
@@ -193,33 +192,35 @@
         }
 
         #about h2 {
-            padding: 0 0 30px 0;
-            font-size: 3em;
+            padding: 0 0 40px 0;
+            font-size: 3.5em;
         }
 
         #about p {
-            font-size: 1.3em;
-            max-width: 800px;
+            font-size: 1.4em;
+            max-width: 900px;
             margin: 0 auto;
-            line-height: 1.8;
+            line-height: 1.9;
+            color: #666;
         }
 
         .services {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 40px;
+            gap: 60px;
         }
 
         .service-card {
-            background: #1a1a1a;
-            padding: 30px;
+            background: #fff;
+            padding: 40px;
             width: 100%;
-            max-width: 380px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            max-width: 420px;
+            box-shadow: 0 15px 35px rgba(255, 105, 180, 0.3);
             text-align: center;
-            transition: all 0.4s ease;
-            border: 1px solid #333;
+            transition: all 0.5s ease;
+            border: 3px solid #ff69b4;
+            border-radius: 25px;
             opacity: 0;
             transform: translateY(50px);
         }
@@ -230,54 +231,61 @@
         }
 
         .service-card:hover {
-            transform: translateY(-10px) scale(1.03);
-            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2);
+            transform: translateY(-20px) scale(1.08);
+            box-shadow: 0 25px 50px rgba(255, 105, 180, 0.5);
         }
 
         .service-card img {
             width: 100%;
             height: auto;
-            border-radius: 8px;
-            margin-bottom: 20px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
         .service-card h3 {
             font-family: 'Playfair Display', serif;
-            color: #d4af37;
-            font-size: 1.8em;
-            margin: 20px 0 15px;
+            color: #c71585;
+            font-size: 2.2em;
+            margin: 25px 0 20px;
+        }
+
+        #contact {
+            background: #ffe4f0;
+            padding: 80px 20px;
         }
 
         #contact p {
             text-align: center;
-            font-size: 1.1em;
-            max-width: 600px;
-            margin: 15px auto;
+            font-size: 1.2em;
+            max-width: 700px;
+            margin: 20px auto;
+            color: #666;
         }
 
         footer {
-            background: #000;
-            color: #999;
+            background: linear-gradient(to right, #ff69b4, #ff1493);
+            color: #fff;
             text-align: center;
-            padding: 40px 20px;
-            font-size: 0.9em;
+            padding: 50px 20px;
+            font-size: 1em;
         }
 
         @media (max-width: 768px) {
             header {
-                padding: 120px 20px 80px;
+                padding: 130px 20px 90px;
             }
 
             .header-logo {
-                width: 200px;
+                width: 240px;
             }
 
             h1 {
-                font-size: 3em;
+                font-size: 3.5em;
             }
 
             header p {
-                font-size: 1.2em;
+                font-size: 1.3em;
             }
 
             .nav-links {
@@ -289,37 +297,19 @@
             }
 
             nav {
-                padding: 10px 20px;
+                padding: 12px 20px;
             }
 
             .nav-logo-img {
-                height: 50px;
+                height: 55px;
             }
 
-            #about .about-card {
-                padding: 40px 30px;
+            .services {
+                gap: 50px;
             }
 
-            #about h2 {
-                font-size: 2.5em;
-            }
-
-            #about p {
-                font-size: 1.2em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2.5em;
-            }
-
-            header p {
-                font-size: 1.1em;
-            }
-
-            #about h2 {
-                font-size: 2.2em;
+            .service-card {
+                padding: 30px;
             }
         }
     </style>
@@ -327,21 +317,21 @@
 
 <body>
     <header>
-        <img src="https://static.vecteezy.com/system/resources/previews/011/643/685/non_2x/barbershop-unique-elegant-gold-logo-template-vector.jpg"
-            alt="Treasure Salon Logo" class="header-logo">
-        <h1>Treasure <span>Salon</span></h1>
-        <p>Exquisite Men's Grooming • Bespoke Perfumes • Casual Sports Footwear</p>
+        <img src="https://thumbs.dreamstime.com/b/rose-gold-vector-icon-girl-silhouette-wavy-long-hair-use-as-logo-salon-extensions-business-118572137.jpg"
+            alt="Treasure Femme Salon Logo" class="header-logo">
+        <h1>Treasure <span>Femme</span> Salon</h1>
+        <p>Elegant Women's Hair Styling • Premium Human Hair Wigs • Luxury Perfumes</p>
     </header>
 
     <nav>
-        <img src="https://static.vecteezy.com/system/resources/previews/011/643/685/non_2x/barbershop-unique-elegant-gold-logo-template-vector.jpg"
-            alt="Treasure Salon Logo" class="nav-logo-img">
+        <img src="https://thumbs.dreamstime.com/b/rose-gold-vector-icon-girl-silhouette-wavy-long-hair-use-as-logo-salon-extensions-business-118572137.jpg"
+            alt="Treasure Femme Salon Logo" class="nav-logo-img">
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#services">Services & Products</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
-            <a href="femme.html">Women's Salon →</a>
+            <a href="index.html">Men's Salon →</a>
         </div>
         <div class="hamburger" onclick="toggleMenu()">☰</div>
     </nav>
@@ -352,58 +342,55 @@
         <a href="#services" onclick="toggleMenu()">Services & Products</a>
         <a href="#about" onclick="toggleMenu()">About</a>
         <a href="#contact" onclick="toggleMenu()">Contact</a>
-        <a href="femme.html" onclick="toggleMenu()">Women's Salon →</a>
+        <a href="index.html" onclick="toggleMenu()">Men's Salon →</a>
     </div>
 
     <section id="about">
         <div class="about-card">
             <h2>About Us</h2>
-            <p>At Treasure Salon, we redefine luxury grooming for the modern gentleman. Our master barber delivers
-                precision haircuts in an atmosphere of refined elegance, complemented by an exclusive curation of
-                world-class perfumes and casual sports shoes.</p>
+            <p>At Treasure Femme Salon, we specialize in exquisite women's hair styling and premium human hair wigs for
+                Black women and all textures, complemented by a curated selection of luxury feminine perfumes – all in a
+                vibrant, empowering atmosphere full of color and elegance.</p>
         </div>
     </section>
 
-    <section id="services" style="background: #111;">
+    <section id="services">
         <h2>Our Exclusive Offerings</h2>
         <div class="services">
             <div class="service-card">
-                <img src="https://media.istockphoto.com/id/937443868/photo/barber-giving-a-haircut-in-his-shop.jpg?s=612x612&w=0&k=20&c=wdcKDn9BnLe979S4BGQlYrKX8d4gBkRc4siYDQgPA-s="
-                    alt="Black man getting professional haircut">
-                <h3>Master Haircuts & Grooming</h3>
-                <p>Signature cuts, hot towel shaves, and beard sculpting by expert artisans. Starting at R80.</p>
+                <img src="https://media.istockphoto.com/id/1707510308/photo/young-black-woman-having-her-hair-styled-for-a-photo-shoot.jpg?s=612x612&w=0&k=20&c=9ZTL_rdoMmIa5Wg9tsf0-XZ6u3gcriASdq7W4n5RXa4="
+                    alt="Black woman getting professional hair styling">
+                <h3>Women's Hair Styling & Treatments</h3>
+                <p>Expert cuts, coloring, blowouts, braids, and protective styles by skilled stylists. Starting at R150.
+                </p>
             </div>
             <div class="service-card">
-                <img src="https://thumbs.dreamstime.com/b/beautifully-crafted-glass-perfume-bottle-filled-rich-dark-amber-liquid-stands-elegantly-reflective-black-surface-408876843.jpg"
-                    alt="Luxury Oud perfume bottles">
-                <h3>Bespoke Perfumes</h3>
-                <p>Curated collection of iconic fragrances, including premium Oud bottles. Average price: R800 (from
-                    R150).</p>
+                <img src="https://i.pinimg.com/736x/1e/9d/46/1e9d46152022e8e88649fb1ef27cc327.jpg"
+                    alt="Black woman wearing premium lace-front wig">
+                <h3>Premium Human Hair Wigs</h3>
+                <p>Luxury lace-front and full wigs in various styles, lengths, and textures. From R2000.</p>
             </div>
             <div class="service-card">
-                <img src="https://m.media-amazon.com/images/I/71+I9Q6ThVL._AC_UY900_.jpg"
-                    alt="Casual men's sports sneakers">
-                <h3>Casual Sports Footwear</h3>
-                <p>Comfortable athletic sneakers for everyday style. From R300.</p>
+                <img src="https://www.devotedtopink.com/wp-content/uploads/2018/03/P3112671-1440x960.jpg"
+                    alt="Luxury pink gold feminine perfume bottles">
+                <h3>Luxury Perfumes</h3>
+                <p>Curated collection of elegant feminine fragrances in beautiful bottles. Average price: R800 (from
+                    R200).</p>
             </div>
         </div>
     </section>
 
     <section id="contact">
         <h2>Visit Us</h2>
-        <section id="contact">
-            <h2>Visit Us</h2>
-            <p>Address: 340 R102, Cape Town</p>
-            <p>Phone: 074 294 6445</p>
-            <p>Email: Tokomunsianduku@gmail.com</p>
-            <p>Hours: Mon-Sat 10AM-8PM | By Appointment Preferred</p>
-        </section>
-
-        <p><a href="femme.html" style="color:#d4af37;">→ Visit Women's Salon (Hair Styling & Wigs)</a></p>
+        <p>Address: [Your Full Address], Cape Town</p>
+        <p>Phone: [Your Phone Number]</p>
+        <p>Email: [Your Email]</p>
+        <p>Hours: Mon-Sat 10AM-8PM | By Appointment Preferred</p>
+        <p><a href="index.html" style="color:#c71585; font-size:1.2em;">← Back to Men's Salon</a></p>
     </section>
 
     <footer>
-        <p>&copy; 2025 Treasure Salon. Crafted with distinction.</p>
+        <p>&copy; 2025 Treasure Femme Salon. Embrace your beauty in full color.</p>
     </footer>
 
     <script>
