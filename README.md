@@ -15,7 +15,8 @@ A modern responsive website built for a beauty salon that offers services, sells
 - JavaScript
 
 ## 📸 Preview
-(Add screenshots or live demo link here)
+<img width="1141" height="591" alt="image" src="https://github.com/user-attachments/assets/355f1087-dae7-43dd-ab1c-fc1e7c3cb4a3" />
+
 
 ## 📦 How to Run
 1. Clone the repository  
